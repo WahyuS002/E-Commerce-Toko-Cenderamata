@@ -288,15 +288,15 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        dd('Controller action called with ID: ' . $id); //untuk check
+        // dd('Controller action called with ID: ' . $id); //untuk check
 
         session()->flash('success','Produk berhasil dihapus');
 
-        if(empty($product)){
+        // if(empty($product)){
             return response()->json([
                 'status' => true,
                 'message' => 'Produk berhasil dihapus'
             ]);
-        }
+        // }
     }
 }
